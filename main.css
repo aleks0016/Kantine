@@ -128,6 +128,8 @@ a {
 @media (width < 1400px) {
   .navbar {
     justify-content: flex-end;
+  .body {
+    max-width: 1000px;
   }
 }
 
