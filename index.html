@@ -4,102 +4,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
+    <title>Cafeteria Website</title>
     <link rel="stylesheet" href="./main.css">
     <script src="js.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Velkommen til Cafe Glemmen</h1>
+    <header id="home">
+        <h1>Velkommen til Café Glemmen</h1>
     </header>
     <nav class="navbar">
-        <a href="#kaldt">Matretter (kald mat)</a>
-        <a href="#varmt">Matretter (varm mat)</a>
+        <a href="#home">HJEM</a>
+        <a href="#kaldt">KALDE MATRETTER</a>
+        <a href="#varmt">VARME MATRETTER</a>
+        <a href="#mandag">MANDAG</a>
+        <a href="#tirsdag">TIRSDAG</a>
+        <a href="#onsdag">ONSDAG</a>
+        <a href="#torsdag">TORSDAG</a>
+        <a href="#fredag">FREDAG</a>
+        <a href="#drikke">DRIKKEVARER</a>
+        <div id="clock" class="clock"></div>
     </nav>
     <section>
-        <h2>Meny</h2>
-        <p>Ukens meny (5-10. Februar 2024):</p>
-        <table>
+        <div style="text-align: center;">
+            <h2>Meny</h2>
+            <p>Her er en liste over matretter som serveres i vår café:</p>
+        </div>
+        
+        <table style="max-width: 1500px;">
             <tr>
-                <td></td>
+                <td id="kaldt" style="height: 100px"></td>
                 <td>
-                    <h1 style="margin-left: -1050px;" id="kaldt">Matretter (kaldt)</h1>
+                    <h1 style="margin-left: -1400px;">Matretter (kaldt)</h1>
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <td>
                     <br style="height: 5px">
-                    <li style="margin-left: 100px;">Salatbar med et utvalg av ferske grønnsaker, og proteiner som kylling eller tofu</li>
+                    <li style="margin-left: 20px;">Salatbar med et utvalg av ferske grønnsaker, og proteiner som
+                        kylling eller tofu</li>
                     <br>
-                    <li style="margin-left: 100px;">Wraps eller sandwicher med grovt brød fylt med grønnsaker, magert kjøtt eller vegetariske pålegg
+                    <li style="margin-left: 20px;">Wraps eller sandwicher med grovt brød fylt med grønnsaker, magert
+                        kjøtt eller vegetariske pålegg
                     </li>
                     <br>
-                    <li style="margin-left: 100px;">Smoothies laget med frukt, yoghurt og eventuelt grønnsaker</li>
+                    <li style="margin-left: 20px;">Smoothies laget med frukt, yoghurt og eventuelt grønnsaker</li>
                     <br>
                 </td>
                 <td>
-                    <li style="margin-left: -25px;"> Kr: 8.50 ,- pr hg
+                    <li style="margin-left: -175px;"> Kr: 8.50 ,- pr hg
                     </li>
                     <br>
-                    <li style="margin-left: -25px;"> Kr: 30.00 ,-
+                    <li style="margin-left: -175px;"> Kr: 30.00 ,-
                     </li>
                     <br>
-                    <li style="margin-left: -25px;"> Kr: 20.00 ,-
+                    <li style="margin-left: -175px;"> Kr: 20.00 ,-
                     </li>
                 </td>
             </tr>
             <tr>
-                <td></td>
+                <td id="varmt" style="height: 100px"></td>
                 <td>
-                    <h1 style="margin-left: -1050px;" id="varmt">Matretter (varmt)</h1>
+                    <h1 style="margin-left: -1400px;">Dagens varme matretter</h1>
                 </td>
                 <td></td>
             </tr>
-            <tr>
+            <tr id="mandag">
                 <td>
-                    <table style="margin-left: 150px;">
+                    <table style="margin-left: 100px; width: 1150px;" class="table-with-dropdowns">
                         <tr>
-                            <td><b>Mandag</b></td>
-                            <td>Kjøttboller i tomatsaus</td>
-                            <td><img src="./img/tomatsaus.png" alt="" class="smallpic"></td>
-                            <td><li>Kr: 50.00 ,-</li></td>
-                        </tr>
-                        <tr>
-                            <td><b>Tirsdag</b></td>
-                            <td>Kyllingburrito med ris og bønner</td>
-                            <td><img src="./img/burritos.png" alt="" class="smallpic"></td>
-                            <td><li>Kr: 40.00 ,-</li></td>
-                        </tr>
-                        <tr>
-                            <td><b>Onsdag</b></td>
-                            <td>Vegetar lasagne med salat</td>
-                            <td><img src="./img/lasagne.png" alt="" class="smallpic"></td>
-                            <td><li>Kr: 30.00 ,-</li></td>
-                        </tr>
-                        <tr>
-                            <td><b>Torsdag</b></td>
-                            <td>Fiskepinner med potetmos</td>
-                            <td><img src="./img/fiskepinner.png" alt="" class="smallpic"></td>
-                            <td><li>Kr: 45.00 ,-</li></td>
-                        </tr>
-                        <tr>
-                            <td><b>Fredag</b></td>
-                            <td>Pizza (pepperoni / vegetar)</td>
-                            <td><img src="./img/pepperoni.png" alt="" class="smallpic">
-                                <img src="./img/vegan.png" alt="" class="smallpic">
+                            <td><b>MANDAG</b></td>
+                            <td>
+                                <div class="dropdown">
+                                    <p><b>Kjøttboller i tomatsaus</b></p>
+                                </div>
                             </td>
-                            <td><li>Kr: 30.00 ,-</li></td>
+                            <td><img src="./img/tomatsaus.png" alt="" class="smallpic" style="margin-left: 10px;"></img></td>
+                            <td>
+                                <p><a href="https://meny.no/oppskrifter/kjottdeig/Kjottboller/"
+                                        target="_blank">Oppskrift</a></p>
+                            </td>
+                            <td>
+                                <li style="margin-left: 100px">Kr: 25.00 ,-</li>
+                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
+            <tr>
+                <td id="tirsdag">
+                    <table style="margin-left: 100px; width: 1150px;" class="table-with-dropdowns">
+                        <tr>
+                            <td><b>TIRSDAG</b></td>
+                            <td>
+                                <div class="dropdown">
+                                    <p><b>Kyllingburrito <br> m/ ris og bønner</b></p>
+                                </div>
+                            </td>
+                            <td><img src="./img/burritos.png" alt="" class="smallpic" style="margin-left: 65px;"></img></td>
+                            <td>
+                                <p><a href=""
+                                        target="_blank">Oppskrift</a></p>
+                            </td>
+                            <td>
+                                <li style="margin-left: 100px">Kr: 30.00 ,-</li>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td id="onsdag">
+                    <table style="margin-left: 100px; width: 1150px;" class="table-with-dropdowns">
+                        <tr>
+                            <td><b>ONSDAG</b></td>
+                            <td>
+                                <div class="dropdown">
+                                    <p><b>Vegetar lasagne <br> m/ salat</b></p>
+                                </div>
+                            </td>
+                            <td><img src="./img/lasagne.png" alt="" class="smallpic" style="margin-left: 66px"></img></td>
+                            <td>
+                                <p><a href="https://meny.no/oppskrifter/kjottdeig/Kjottboller/"
+                                        target="_blank">Oppskrift</a></p>
+                            </td>
+                            <td>
+                                <li style="margin-left: 100px">Kr: 35.00 ,-</li>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td  id="torsdag">
+                    <table style="margin-left: 100px; width: 1150px;" class="table-with-dropdowns">
+                        <tr>
+                            <td><b>TORSDAG</b></td>
+                            <td>
+                                <div class="dropdown">
+                                    <p><b>Fiskepinner <br> m/ potetmos</b></p>
+                                </div>
+                            </td>
+                            <td><img src="./img/fiskepinner.png" alt="" class="smallpic" style="margin-left: 92px"></img></td>
+                            <td>
+                                <p><a href="https://meny.no/oppskrifter/kjottdeig/Kjottboller/"
+                                        target="_blank">Oppskrift</a></p>
+                            </td>
+                            <td>
+                                <li style="margin-left: 100px">Kr: 35.00 ,-</li>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td id="fredag">
+                    <table style="margin-left: 100px; width: 1150px;" class="table-with-dropdowns">
+                        <tr>
+                            <td style="height: 100px"><b>FREDAG</b></td>
+                            <td>
+                                <div class="dropdown">
+                                    <p style="margin-left: -490px; font-size: 20px;"><b>PIZZA</b></p>
+                                </div>
+                            </td>
+                            <table style="width: 380px; margin-left: auto; margin-right: auto;">
+                                <tr>
+                                    <td style="text-align: center">Pepperoni</td>
+                                    <td style="text-align: center">Vegetar</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./img/pepperoni.png" alt="" class="smallpic2"></img></td>
+                                    <td><img src="./img/vegan.png" alt="" class="smallpic2"></img></td>
+                                </tr>
+                                <tr>
+                                    <td><p style="text-align: center"><a href=""
+                                        target="_blank">Oppskrift</a></p></td>
+                                    <td><p style="text-align: center"><a href=""
+                                        target="_blank">Oppskrift</a></p></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <li>Kr: 25.00 ,- (per bit)</li>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <li>Kr: 25.00 ,- (per bit)</li>
+                                    </td>
+                                </tr>
+                            </table>
+                    
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center;" id="drikke">DRIKKEVARER</h1>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <table style="margin-left: 250px; width: 800px;">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Sjokolademelk</td>
+                        <td>
+                            <li>Kr: 20.00 ,-</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Ferskpresset juice (appelsin og eple juice)</td>
+                        <td>
+                            <li>Kr: 20.00 ,-</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Energidrikker (Red Bull og Monster)</td>
+                        <td>
+                            <li>Kr: 25.00 ,-</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Iskaffe</td>
+                        <td>
+                            <li>Kr: 20.00,-</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Iste</td>
+                        <td>
+                            <li>Kr: 15.00,-</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Vannflaske</td>
+                        <td>
+                            <li>Kr: 17.00,-</li>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
         </table>
     </section>
     <footer class="footer">
-        <p>&copy; 2024 Aleksander Holt. All rights reserved.</p> 
+        <p>&copy; 2024 Aleksander Holt. All rights reserved.</p>
     </footer>
+
+    <script>
+        function displayTime() {
+            var date = new Date();
+            var time = date.toLocaleTimeString();
+            document.getElementById('clock').innerHTML = time;
+        }
+        setInterval(displayTime, 1000); // Update time every second
+        </script>
 </body>
 
 </html>
